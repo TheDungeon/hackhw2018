@@ -7,12 +7,12 @@ namespace HackHW2018
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Game1 : Game
+    public class Core : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         
-        public Game1()
+        public Core()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
