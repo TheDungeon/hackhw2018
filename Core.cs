@@ -21,7 +21,6 @@ namespace HackHW2018
             get => _currentScene;
             set => _nextScene = value;
         }
-        
         public Core()
         {
             Graphics = new GraphicsDeviceManager(this);
