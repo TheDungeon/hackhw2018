@@ -11,7 +11,7 @@ namespace HackHW2018
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        
+
         public Core()
         {
             graphics = new GraphicsDeviceManager(this);

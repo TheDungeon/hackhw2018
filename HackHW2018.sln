@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackHW2018.Windows", "HackH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackHW2018.SharedLibrary", "..\HackHW2018.SharedLibrary\HackHW2018.SharedLibrary.csproj", "{DB27B49A-056B-48FA-BC0D-B8E032218A70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackHW2018.Mac.Desktop", "HackHW2018.Mac\HackHW2018.Mac.Desktop.csproj", "{905B6B3B-33B1-49FB-B691-AE30F88CB4F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +19,17 @@ Global
 		{E12D50C2-63B5-4095-BFB8-52D310D5B358}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E12D50C2-63B5-4095-BFB8-52D310D5B358}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E12D50C2-63B5-4095-BFB8-52D310D5B358}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< Updated upstream
 		{DB27B49A-056B-48FA-BC0D-B8E032218A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB27B49A-056B-48FA-BC0D-B8E032218A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB27B49A-056B-48FA-BC0D-B8E032218A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB27B49A-056B-48FA-BC0D-B8E032218A70}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{905B6B3B-33B1-49FB-B691-AE30F88CB4F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{905B6B3B-33B1-49FB-B691-AE30F88CB4F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{905B6B3B-33B1-49FB-B691-AE30F88CB4F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{905B6B3B-33B1-49FB-B691-AE30F88CB4F5}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> Stashed changes
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
