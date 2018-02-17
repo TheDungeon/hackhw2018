@@ -6,11 +6,26 @@ namespace HackHW2018.Components
     /// This class represents the position of an object relative to the world.
     /// 
     /// </summary>
-    public struct Transform
+    public class Transform : Component
     {
         public Vector2 Position;
         public Vector2 Scale;
         public float Rotation;
-        public Vector2 Origin;
+
+        public Transform(Entity entity, Vector2 position, Vector2 scale, float rotation)
+            :base(entity)
+        {
+            Position = position;
+            Scale = scale;
+            Rotation = rotation;
+        }
+
+        public override void Render()
+        {
+        }
+
+        public override void Update()
+        {
+        }
     }
 }
