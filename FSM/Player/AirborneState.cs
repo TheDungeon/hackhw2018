@@ -1,18 +1,14 @@
 ﻿using HackHW2018.Components;
-using HackHW2018.State;
-using Microsoft.Xna.Framework;
 using Nez;
 
 namespace HackHW2018.FSM.Player
 {
     public class AirborneState : PlayerState
-    {       
-        bool Peaked = false;
-        int Sign = 1;
-        
+    {
         public override void Begin(PlayerController controller)
         {
             controller.UpdateAnimation(PlayerAnimationState.Jumping);
+            controller.Velocity.Y = -Mathf.sqrt(2 * controller.JumpVelocity * controller.Gravity);
         }
 
         public override void End(PlayerController controller)
@@ -21,19 +17,23 @@ namespace HackHW2018.FSM.Player
         }
 
         public override PlayerState Update(PlayerController controller)
-        {
-            controller.Velocity.Y -= (controller.JumpVelocity * Time.deltaTime) * Sign;
+        {             
             controller.Velocity.Y += Time.deltaTime * controller.Gravity;
+            controller.Velocity.X += controller.MoveSpeed * Time.deltaTime;
 
-            controller.Mover.move(controller.Velocity * Time.deltaTime, controller.Collider, controller.CollisionState);
-
-            if (controller.Velocity.Y < -500)
+            if (controller.Velocity.X > controller.MaxHorizVelo)
             {
-                Sign *= -1;
-                Peaked = true;
+                controller.Velocity.X = controller.MaxHorizVelo * controller.MaxHorizVeloModifier;
             }
 
-            if (Peaked && controller.CollisionState.below) // if a quarter second passed + is colliding with ground
+            if (controller.Velocity.X > controller.MaxJumpHeight * controller.MaxJumpHeightModifier)
+            {
+                controller.Velocity.X = controller.MaxJumpHeight * controller.MaxJumpHeightModifier;
+            }
+
+            controller.Mover.move(controller.Velocity * Time.deltaTime, controller.Collider, controller.CollisionState);            
+
+            if (controller.CollisionState.below) // if a quarter second passed + is colliding with ground
             {
                 return new GroundedState();
             }

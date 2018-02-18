@@ -1,18 +1,16 @@
 ﻿using HackHW2018.Components;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Nez;
 using System;
 
 namespace HackHW2018.FSM.Player
-{    
+{
     public class GroundedState : PlayerState
     {
-        const float MaximumHorizontalVelocity = 250;
 
         public override void Begin(PlayerController controller)
         {
-            controller.UpdateAnimation(State.PlayerAnimationState.Running);
+            controller.UpdateAnimation(PlayerAnimationState.Running);
         }
 
         public override void End(PlayerController controller)
@@ -24,7 +22,10 @@ namespace HackHW2018.FSM.Player
             controller.Velocity.X += Math.Min(controller.MoveSpeed * Time.deltaTime, 750);
             controller.Velocity.Y += Time.deltaTime * controller.Gravity;
 
-            controller.Velocity.X = MathHelper.Clamp(controller.Velocity.X, 0, MaximumHorizontalVelocity);
+            if (controller.Velocity.X > controller.MaxHorizVelo * controller.MaxHorizVeloModifier)
+            {
+                controller.Velocity.X = controller.MaxHorizVelo * controller.MaxHorizVeloModifier;
+            }
 
             controller.Mover.move(controller.Velocity * Time.deltaTime, controller.Collider, controller.CollisionState);
 

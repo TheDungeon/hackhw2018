@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/Owner/source/repos/HackHW2018/Content/Red/RedIdle.png</SourceFile>
-  <SourceTime>2018-02-18T02:23:36-08:00</SourceTime>
+  <SourceTime>2018-02-18T09:34:54-08:00</SourceTime>
   <DestFile>C:/Users/Owner/source/repos/HackHW2018/Content/bin/DesktopGL/Red/RedIdle.xnb</DestFile>
-  <DestTime>2018-02-18T02:44:56.1045074-08:00</DestTime>
+  <DestTime>2018-02-18T09:52:19.8526057-08:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T07:05:36-08:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -13,12 +13,7 @@ namespace HackHW2018.Factories
 
             var background = scene.content.Load<TiledMap>("dungeon");
             var tiledMapComponent = new TiledMapComponent(background);
-            entity.addComponent(new TiledMapComponent(background));
-
-            var collisionLayer = background.getObjectGroup("CollisionLayer");
-            var ground = collisionLayer.objectWithName("Ground");
-
-            entity.addComponent(new BoxCollider(ground.x - ground.width / 2, ground.y - ground.height / 2, ground.width, ground.height));
+            entity.addComponent(new TiledMapComponent(background, "TileLayer", true));
 
             return entity;
         }

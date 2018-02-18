@@ -1,6 +1,5 @@
 ﻿using HackHW2018.Components;
-using HackHW2018.State;
-using Microsoft.Xna.Framework;
+using HackHW2018.FSM.Player;
 using Nez;
 using Nez.Sprites;
 using Nez.TextureAtlases;
@@ -15,8 +14,8 @@ namespace HackHW2018.Factories
         static int NextPlayerIndex = 0;
 
         public static Entity MakePlayer(Scene scene)
-        {
-            var entity = scene.createEntity(State.PlayerIndex.Ids[NextPlayerIndex]);
+        {            
+            var entity = scene.createEntity(HackHW2018.FSM.Player.PlayerIndex.Ids[NextPlayerIndex]);
 
             TexturePackerAtlas playerAtlas = null;
             SpriteAnimation playerJumpAnimation = null;
@@ -55,10 +54,91 @@ namespace HackHW2018.Factories
                     }
                     break;
                 case 1:
+                    {
+                        playerAtlas = scene.content.Load<TexturePackerAtlas>("GreenTextureAtlas");
+
+                        playerJumpAnimation = new SpriteAnimation(new List<Subtexture>()
+                        {
+                            playerAtlas.getSubtexture("Jump/GreenJump0001"),
+                            playerAtlas.getSubtexture("Jump/GreenJump0002"),
+                            playerAtlas.getSubtexture("Jump/GreenJump0003"),
+                            playerAtlas.getSubtexture("Jump/GreenJump0004"),
+                            playerAtlas.getSubtexture("Jump/GreenJump0005"),
+                            playerAtlas.getSubtexture("Jump/GreenJump0006"),
+                            playerAtlas.getSubtexture("Jump/GreenJump0007"),
+                            playerAtlas.getSubtexture("Jump/GreenJump0008"),
+                        });
+                        playerJumpAnimation.setFps(5f);
+
+                        playerRunAnimation = new SpriteAnimation(new List<Subtexture>()
+                        {
+                            playerAtlas.getSubtexture("Run/GreenRunCycle0001"),
+                            playerAtlas.getSubtexture("Run/GreenRunCycle0002"),
+                            playerAtlas.getSubtexture("Run/GreenRunCycle0003"),
+                            playerAtlas.getSubtexture("Run/GreenRunCycle0004"),
+                        });
+                        playerRunAnimation.setFps(12f);
+
+                        playerIdleAnimation = new SpriteAnimation(playerAtlas.getSubtexture("GreenIdle"));
+                    }
                     break;
                 case 2:
+                    {
+                        playerAtlas = scene.content.Load<TexturePackerAtlas>("RedTextureAtlas");
+
+                        playerJumpAnimation = new SpriteAnimation(new List<Subtexture>()
+                        {
+                            playerAtlas.getSubtexture("Jump/RedJump0001"),
+                            playerAtlas.getSubtexture("Jump/RedJump0002"),
+                            playerAtlas.getSubtexture("Jump/RedJump0003"),
+                            playerAtlas.getSubtexture("Jump/RedJump0004"),
+                            playerAtlas.getSubtexture("Jump/RedJump0005"),
+                            playerAtlas.getSubtexture("Jump/RedJump0006"),
+                            playerAtlas.getSubtexture("Jump/RedJump0007"),
+                            playerAtlas.getSubtexture("Jump/RedJump0008"),
+                        });
+                        playerJumpAnimation.setFps(5f);
+
+                        playerRunAnimation = new SpriteAnimation(new List<Subtexture>()
+                        {
+                            playerAtlas.getSubtexture("Run/RedRunCycle0001"),
+                            playerAtlas.getSubtexture("Run/RedRunCycle0002"),
+                            playerAtlas.getSubtexture("Run/RedRunCycle0003"),
+                            playerAtlas.getSubtexture("Run/RedRunCycle0004"),
+                        });
+                        playerRunAnimation.setFps(12f);
+
+                        playerIdleAnimation = new SpriteAnimation(playerAtlas.getSubtexture("RedIdle"));
+                    }
                     break;
                 case 3:
+                    {
+                        playerAtlas = scene.content.Load<TexturePackerAtlas>("YellowTextureAtlas");
+
+                        playerJumpAnimation = new SpriteAnimation(new List<Subtexture>()
+                        {
+                            playerAtlas.getSubtexture("Jump/YellowJump0001"),
+                            playerAtlas.getSubtexture("Jump/YellowJump0002"),
+                            playerAtlas.getSubtexture("Jump/YellowJump0003"),
+                            playerAtlas.getSubtexture("Jump/YellowJump0004"),
+                            playerAtlas.getSubtexture("Jump/YellowJump0005"),
+                            playerAtlas.getSubtexture("Jump/YellowJump0006"),
+                            playerAtlas.getSubtexture("Jump/YellowJump0007"),
+                            playerAtlas.getSubtexture("Jump/YellowJump0008"),
+                        });
+                        playerJumpAnimation.setFps(5f);
+
+                        playerRunAnimation = new SpriteAnimation(new List<Subtexture>()
+                        {
+                            playerAtlas.getSubtexture("Run/YellowRunCycle0001"),
+                            playerAtlas.getSubtexture("Run/YellowRunCycle0002"),
+                            playerAtlas.getSubtexture("Run/YellowRunCycle0003"),
+                            playerAtlas.getSubtexture("Run/YellowRunCycle0004"),
+                        });
+                        playerRunAnimation.setFps(12f);
+
+                        playerIdleAnimation = new SpriteAnimation(playerAtlas.getSubtexture("YellowIdle"));
+                    }
                     break;
             }
 
@@ -77,7 +157,7 @@ namespace HackHW2018.Factories
             var background = scene.findEntity("background");
             var tiledMap = background.getComponent<TiledMapComponent>().tiledMap;
 
-            entity.transform.setPosition(148, 366);
+            entity.transform.setPosition(148 * NextPlayerIndex, 366);
             entity.addComponent(new TiledMapMover(tiledMap.getLayer<TiledTileLayer>("TileLayer")));
 
             var width = playerIdleAnimation.frames[0].sourceRect.Width;

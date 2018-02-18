@@ -675,3 +675,75 @@
 /processorParam:parseAnimations=False
 /build:BlueTextureAtlas.json
 
+#begin TrapSpriteSheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TrapSpriteSheet.png
+
+#begin TrapTextureAtlas.json
+/importer:TexturePackerJsonImporter
+/processor:TexturePackerProcessor
+/processorParam:parseAnimations=False
+/build:TrapTextureAtlas.json
+
+#begin YellowSpriteSheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:YellowSpriteSheet.png
+
+#begin YellowTextureAtlas.json
+/importer:TexturePackerJsonImporter
+/processor:TexturePackerProcessor
+/processorParam:parseAnimations=False
+/build:YellowTextureAtlas.json
+
+#begin GreenSpriteSheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:GreenSpriteSheet.png
+
+#begin GreenTextureAtlas.json
+/importer:TexturePackerJsonImporter
+/processor:TexturePackerProcessor
+/processorParam:parseAnimations=False
+/build:GreenTextureAtlas.json
+
+#begin RedSpriteSheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:RedSpriteSheet.png
+
+#begin RedTextureAtlas.json
+/importer:TexturePackerJsonImporter
+/processor:TexturePackerProcessor
+/processorParam:parseAnimations=False
+/build:RedTextureAtlas.json
+

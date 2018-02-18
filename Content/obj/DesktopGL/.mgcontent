@@ -60,5 +60,13 @@
     <File>C:/Users/Owner/source/repos/HackHW2018/Content/Yellow/YellowIdle.png</File>
     <File>C:/Users/Owner/source/repos/HackHW2018/Content/BlueAtlasSpriteSheet.png</File>
     <File>C:/Users/Owner/source/repos/HackHW2018/Content/BlueTextureAtlas.json</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/TrapSpriteSheet.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/TrapTextureAtlas.json</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/YellowSpriteSheet.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/YellowTextureAtlas.json</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/GreenSpriteSheet.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/GreenTextureAtlas.json</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/RedSpriteSheet.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/RedTextureAtlas.json</File>
   </SourceFiles>
 </SourceFileCollection>

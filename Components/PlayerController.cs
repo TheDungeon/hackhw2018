@@ -1,6 +1,7 @@
 ﻿using HackHW2018.FSM.Player;
-using HackHW2018.State;
+using HackHW2018.Scenes;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 using Nez;
 using Nez.Sprites;
 using Nez.Tiled;
@@ -10,26 +11,33 @@ namespace HackHW2018.Components
     public class PlayerController : Component, IUpdatable
     {
         public float MoveSpeed = 125;
+        public float MaxHorizVelo = 350;
+        public float MaxHorizVeloModifier = 1;
         public float Gravity = 1000;
-        public float JumpVelocity = 1500;
+        public float JumpVelocity = 120;
+        public float MaxJumpHeight = 750;
+        public float MaxJumpHeightModifier = 1;
         public Vector2 Velocity;
 
         public TiledMapMover Mover;
-        public BoxCollider Collider;        
+        public BoxCollider Collider;
         public Sprite<PlayerAnimationState> Sprite;
 
-        public PlayerState StateMachine;
+        public PlayerState RegularStateMachine;
+        public SpeedModiferState SpeedState;
 
         public TiledMapMover.CollisionState CollisionState = new TiledMapMover.CollisionState();
 
         public override void OnAddedToEntity()
-        {            
+        {
             Mover = this.getComponent<TiledMapMover>();
             Collider = this.getComponent<BoxCollider>();
-            StateMachine = new GroundedState();            
+            RegularStateMachine = new GroundedState();
+            SpeedState = new SpeedModiferState();
             Sprite = this.getComponent<Sprite<PlayerAnimationState>>();
 
-            StateMachine.Begin(this);
+            RegularStateMachine.Begin(this);
+            SpeedState.Begin(this);
 
             base.OnAddedToEntity();
         }
@@ -50,15 +58,33 @@ namespace HackHW2018.Components
         }
 
         public void Update()
-        {            
-            var nextStateMachine = StateMachine.Update(this);
+        {
+            var nextStateMachine = RegularStateMachine.Update(this);
+            var nextSpeedMachine = SpeedState.Update(this);
 
-            if (nextStateMachine != StateMachine)
+            if (nextStateMachine != RegularStateMachine)
             {
-                StateMachine.End(this);
-                StateMachine = nextStateMachine;
-                StateMachine.Begin(this);
-            }            
+                RegularStateMachine.End(this);
+                RegularStateMachine = nextStateMachine;
+                RegularStateMachine.Begin(this);
+            }
+
+            if (Input.isKeyPressed(Keys.Down))
+            {
+                SpeedState.AnimationFpsModifier = 0.33f;
+                SpeedState.VelocityModifier = 0.33f;
+            }
+
+            else if (Input.isKeyReleased(Keys.Down))
+            {
+                SpeedState.AnimationFpsModifier = 1f;
+                SpeedState.VelocityModifier = 1f;
+            }
+
+            if (Input.isKeyPressed(Keys.S))
+            {
+                (entity.scene as MainScene).Paused = !(entity.scene as MainScene).Paused;
+            }
         }
     }
 }

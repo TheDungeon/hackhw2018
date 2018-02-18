@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/Owner/source/repos/HackHW2018/Content/TrapTextureAtlas.json</SourceFile>
+  <SourceTime>2018-02-18T08:53:19.3357928-08:00</SourceTime>
+  <DestFile>C:/Users/Owner/source/repos/HackHW2018/Content/bin/DesktopGL/TrapTextureAtlas.xnb</DestFile>
+  <DestTime>2018-02-18T09:05:25.4212702-08:00</DestTime>
+  <Importer>TexturePackerJsonImporter</Importer>
+  <ImporterTime>2018-02-18T02:57:23.8995377-08:00</ImporterTime>
+  <Processor>TexturePackerProcessor</Processor>
+  <ProcessorTime>2018-02-18T02:57:23.8995377-08:00</ProcessorTime>
+  <Parameters>
+    <Key>parseAnimations</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
