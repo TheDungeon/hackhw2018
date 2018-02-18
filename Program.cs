@@ -13,7 +13,7 @@ namespace HackHW2018
         [STAThread]
         static void Main()
         {
-            using (var game = new Core())
+            using (var game = new MainGame())
                 game.Run();
         }
     }
