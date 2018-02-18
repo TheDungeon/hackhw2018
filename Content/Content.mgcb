@@ -5,11 +5,14 @@
 /intermediateDir:obj/$(Platform)
 /platform:DesktopGL
 /config:
-/profile:Reach
+/profile:HiDef
 /compress:False
 
 #-------------------------------- References --------------------------------#
 
+/reference:..\Nez\Nez.PipelineImporter\bin\Debug\Ionic.ZLib.dll
+/reference:..\Nez\Nez.PipelineImporter\bin\Debug\Newtonsoft.Json.dll
+/reference:..\Nez\Nez.PipelineImporter\bin\Debug\Nez.PipelineImporter.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -25,7 +28,12 @@
 /processorParam:TextureFormat=Color
 /build:BlueIdle.png
 
-#begin Background.png
+#begin dungeon.tmx
+/importer:TiledMapImporter
+/processor:TiledMapProcessor
+/build:dungeon.tmx
+
+#begin BackgroundLarge.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -35,5 +43,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Background.png
+/build:BackgroundLarge.png
 

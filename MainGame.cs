@@ -6,13 +6,12 @@ namespace HackHW2018
     /// This is the main type for the game.
     /// </summary>
     public class MainGame : Core
-    {
-        Scene.SceneResolutionPolicy policy;
-
+    {        
         public MainGame()
             : base(windowTitle: "Fug.io")
         {
-            
+            Scene.setDefaultDesignResolution(1280, 720, Scene.SceneResolutionPolicy.BestFit);
+            Window.AllowUserResizing = true;
         }
 
         protected override void Initialize()

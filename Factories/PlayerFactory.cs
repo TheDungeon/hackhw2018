@@ -8,6 +8,8 @@ namespace HackHW2018.Factories
         {
             var entity = scene.createEntity(playerIndex.ToString());
 
+            
+
             return entity;
         }
     }

@@ -12,6 +12,7 @@ namespace HackHW2018.Scenes
     {
         public override void Initialize()
         {
+            addRenderer(new DefaultRenderer());
             var background = BackgroundFactory.MakeBackground(this);
 
             base.Initialize();
