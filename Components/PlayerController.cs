@@ -59,6 +59,13 @@ namespace HackHW2018.Components
 
         public void Update()
         {
+            var cam = entity.scene.camera;
+
+            if (transform.position.X > cam.transform.position.X + cam.bounds.width / 2)
+            {
+                RegularStateMachine = new DeadDeadNotGoodState();
+            }
+
             var nextStateMachine = RegularStateMachine.Update(this);
             var nextSpeedMachine = SpeedState.Update(this);
 
@@ -68,7 +75,7 @@ namespace HackHW2018.Components
                 RegularStateMachine = nextStateMachine;
                 RegularStateMachine.Begin(this);
             }
-
+                        
             if (Input.isKeyPressed(Keys.Down))
             {
                 SpeedState.AnimationFpsModifier = 0.33f;
@@ -79,11 +86,6 @@ namespace HackHW2018.Components
             {
                 SpeedState.AnimationFpsModifier = 1f;
                 SpeedState.VelocityModifier = 1f;
-            }
-
-            if (Input.isKeyPressed(Keys.S))
-            {
-                (entity.scene as MainScene).Paused = !(entity.scene as MainScene).Paused;
             }
         }
     }

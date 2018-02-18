@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Owner/source/repos/HackHW2018/Content/TrapSpriteSheet.png</SourceFile>
-  <SourceTime>2018-02-18T10:37:56.0674143-08:00</SourceTime>
-  <DestFile>C:/Users/Owner/source/repos/HackHW2018/Content/bin/DesktopGL/TrapSpriteSheet.xnb</DestFile>
-  <DestTime>2018-02-18T10:37:59.9820719-08:00</DestTime>
+  <SourceFile>C:/Users/Owner/source/repos/HackHW2018/Content/StartGameButton.png</SourceFile>
+  <SourceTime>2018-02-18T11:12:06.7453653-08:00</SourceTime>
+  <DestFile>C:/Users/Owner/source/repos/HackHW2018/Content/bin/DesktopGL/StartGameButton.xnb</DestFile>
+  <DestTime>2018-02-18T11:21:06.2384145-08:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T07:05:36-08:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

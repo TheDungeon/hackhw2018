@@ -15,9 +15,10 @@ namespace HackHW2018
         }
 
         protected override void Initialize()
-        {
-            scene = new MainScene();
+        {            
             base.Initialize();
+
+            scene = new LoadingScene();
         }
     }
 }

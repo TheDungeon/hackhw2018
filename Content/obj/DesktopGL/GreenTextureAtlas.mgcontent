@@ -3,11 +3,11 @@
   <SourceFile>C:/Users/Owner/source/repos/HackHW2018/Content/GreenTextureAtlas.json</SourceFile>
   <SourceTime>2018-02-18T09:54:15.9587472-08:00</SourceTime>
   <DestFile>C:/Users/Owner/source/repos/HackHW2018/Content/bin/DesktopGL/GreenTextureAtlas.xnb</DestFile>
-  <DestTime>2018-02-18T09:54:20.0948141-08:00</DestTime>
+  <DestTime>2018-02-18T10:23:43.2896933-08:00</DestTime>
   <Importer>TexturePackerJsonImporter</Importer>
-  <ImporterTime>2018-02-18T02:57:23.8995377-08:00</ImporterTime>
+  <ImporterTime>2018-02-18T10:23:42.5151157-08:00</ImporterTime>
   <Processor>TexturePackerProcessor</Processor>
-  <ProcessorTime>2018-02-18T02:57:23.8995377-08:00</ProcessorTime>
+  <ProcessorTime>2018-02-18T10:23:42.5151157-08:00</ProcessorTime>
   <Parameters>
     <Key>parseAnimations</Key>
     <Value>False</Value>

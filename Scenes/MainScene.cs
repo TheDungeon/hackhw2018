@@ -7,7 +7,7 @@ namespace HackHW2018.Scenes
 {
     public class MainScene : Scene
     {
-        int MapWidth = 0;
+        public int MapWidth = 0;
         float TimePassed = 0;
         public bool Paused = false;
 
@@ -17,8 +17,9 @@ namespace HackHW2018.Scenes
             samplerState = SamplerState.PointClamp;
 
             var background = BackgroundFactory.MakeBackground(this);
-
             var tiledMap = background.getComponent<TiledMapComponent>();
+
+            ScenePopulationFactory.PopulateScene(this, tiledMap.tiledMap.getObjectGroup("EntityLayer"));
 
             MapWidth = (int)tiledMap.width;
 
@@ -29,7 +30,7 @@ namespace HackHW2018.Scenes
 
             base.Initialize();
         }
-        
+
 
         public override void Update()
         {
@@ -54,11 +55,9 @@ namespace HackHW2018.Scenes
                 base.Update();
             }
 
-            else
-            {
-                if (Input.isKeyPressed(Microsoft.Xna.Framework.Input.Keys.S))
-                    Paused = !Paused;
-            }
+
+            if (Input.isKeyPressed(Microsoft.Xna.Framework.Input.Keys.S))
+                Paused = !Paused;
         }
     }
 }
