@@ -4,8 +4,61 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Owner/source/repos/HackHW2018/Content/BlueIdle.png</File>
     <File>C:/Users/Owner/source/repos/HackHW2018/Content/dungeon.tmx</File>
     <File>C:/Users/Owner/source/repos/HackHW2018/Content/BackgroundLarge.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Blue/Jump/BlueJump0001.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Blue/Jump/BlueJump0002.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Blue/Jump/BlueJump0003.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Blue/Jump/BlueJump0004.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Blue/Jump/BlueJump0005.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Blue/Jump/BlueJump0006.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Blue/Jump/BlueJump0007.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Blue/Jump/BlueJump0008.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Blue/Run/BlueRunCycle0001.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Blue/Run/BlueRunCycle0002.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Blue/Run/BlueRunCycle0003.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Blue/Run/BlueRunCycle0004.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Blue/BlueIdle.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Green/Jump/GreenJump0001.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Green/Jump/GreenJump0002.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Green/Jump/GreenJump0003.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Green/Jump/GreenJump0004.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Green/Jump/GreenJump0005.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Green/Jump/GreenJump0006.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Green/Jump/GreenJump0007.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Green/Jump/GreenJump0008.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Green/Run/GreenRunCycle0001.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Green/Run/GreenRunCycle0002.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Green/Run/GreenRunCycle0003.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Green/Run/GreenRunCycle0004.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Green/GreenIdle.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Red/Jump/RedJump0001.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Red/Jump/RedJump0002.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Red/Jump/RedJump0003.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Red/Jump/RedJump0004.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Red/Jump/RedJump0005.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Red/Jump/RedJump0006.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Red/Jump/RedJump0007.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Red/Jump/RedJump0008.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Red/Run/RedRunCycle0001.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Red/Run/RedRunCycle0002.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Red/Run/RedRunCycle0003.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Red/Run/RedRunCycle0004.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Red/RedIdle.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Yellow/Jump/YellowJump0001.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Yellow/Jump/YellowJump0002.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Yellow/Jump/YellowJump0003.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Yellow/Jump/YellowJump0004.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Yellow/Jump/YellowJump0005.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Yellow/Jump/YellowJump0006.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Yellow/Jump/YellowJump0007.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Yellow/Jump/YellowJump0008.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Yellow/Run/YellowRunCycle0001.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Yellow/Run/YellowRunCycle0002.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Yellow/Run/YellowRunCycle0003.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Yellow/Run/YellowRunCycle0004.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/Yellow/YellowIdle.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/BlueAtlasSpriteSheet.png</File>
+    <File>C:/Users/Owner/source/repos/HackHW2018/Content/BlueTextureAtlas.json</File>
   </SourceFiles>
 </SourceFileCollection>

@@ -10,7 +10,7 @@ namespace HackHW2018
         public MainGame()
             : base(windowTitle: "Fug.io")
         {
-            Scene.setDefaultDesignResolution(1280, 720, Scene.SceneResolutionPolicy.BestFit);
+            Scene.setDefaultDesignResolution(1280, 720, Scene.SceneResolutionPolicy.FixedHeightPixelPerfect);
             Window.AllowUserResizing = true;
         }
 

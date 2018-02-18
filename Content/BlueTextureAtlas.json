@@ -1,0 +1,129 @@
+{"frames": [
+
+{
+	"filename": "BlueIdle.png",
+	"frame": {"x":283,"y":1,"w":319,"h":520},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":319,"h":520},
+	"sourceSize": {"w":319,"h":520},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Jump/BlueJump0001.png",
+	"frame": {"x":1194,"y":1247,"w":478,"h":725},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":17,"w":478,"h":725},
+	"sourceSize": {"w":585,"h":750},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Jump/BlueJump0002.png",
+	"frame": {"x":388,"y":572,"w":308,"h":665},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":201,"y":0,"w":308,"h":665},
+	"sourceSize": {"w":585,"h":750},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Jump/BlueJump0003.png",
+	"frame": {"x":462,"y":1247,"w":370,"h":700},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":215,"y":24,"w":370,"h":700},
+	"sourceSize": {"w":585,"h":750},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Jump/BlueJump0004.png",
+	"frame": {"x":834,"y":1247,"w":358,"h":715},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":215,"y":31,"w":358,"h":715},
+	"sourceSize": {"w":585,"h":750},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Jump/BlueJump0005.png",
+	"frame": {"x":1100,"y":572,"w":323,"h":673},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":215,"y":74,"w":323,"h":673},
+	"sourceSize": {"w":585,"h":750},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Jump/BlueJump0006.png",
+	"frame": {"x":1,"y":1,"w":280,"h":537},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":201,"y":210,"w":280,"h":537},
+	"sourceSize": {"w":585,"h":750},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Jump/BlueJump0007.png",
+	"frame": {"x":981,"y":1,"w":328,"h":569},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":150,"y":181,"w":328,"h":569},
+	"sourceSize": {"w":585,"h":750},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Jump/BlueJump0008.png",
+	"frame": {"x":698,"y":572,"w":400,"h":585},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":78,"y":163,"w":400,"h":585},
+	"sourceSize": {"w":585,"h":750},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Run/BlueRunCycle0001.png",
+	"frame": {"x":1,"y":1247,"w":459,"h":553},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":30,"w":459,"h":553},
+	"sourceSize": {"w":484,"h":600},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Run/BlueRunCycle0002.png",
+	"frame": {"x":604,"y":1,"w":375,"h":513},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":109,"y":87,"w":375,"h":513},
+	"sourceSize": {"w":484,"h":600},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Run/BlueRunCycle0003.png",
+	"frame": {"x":1,"y":572,"w":385,"h":576},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":76,"y":20,"w":385,"h":576},
+	"sourceSize": {"w":484,"h":600},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Run/BlueRunCycle0004.png",
+	"frame": {"x":1311,"y":1,"w":464,"h":467},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":464,"h":467},
+	"sourceSize": {"w":484,"h":600},
+	"pivot": {"x":0.5,"y":0.5}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "BlueAtlasSpriteSheet.png",
+	"format": "RGBA8888",
+	"size": {"w":1776,"h":1973},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:87e864d1db77d5a8814431bdf6a699f4:c07135d8674e3294bdb334ff87df9c6d:97e2706c847994ad71e7fd8766206b54$"
+}
+}
