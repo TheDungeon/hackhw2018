@@ -26,6 +26,8 @@ namespace HackHW2018.Components
         public PlayerState RegularStateMachine;
         public SpeedModiferState SpeedState;
 
+        //public PlayerInput Input;
+
         public TiledMapMover.CollisionState CollisionState = new TiledMapMover.CollisionState();
 
         public override void OnAddedToEntity()
@@ -35,6 +37,7 @@ namespace HackHW2018.Components
             RegularStateMachine = new GroundedState();
             SpeedState = new SpeedModiferState();
             Sprite = this.getComponent<Sprite<PlayerAnimationState>>();
+            //Input = this.getComponent<PlayerInput>();
 
             RegularStateMachine.Begin(this);
             SpeedState.Begin(this);

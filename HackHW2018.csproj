@@ -42,11 +42,15 @@
   <PropertyGroup />
   <ItemGroup>
     <Compile Include="Components\PlayerController.cs" />
+    <Compile Include="Components\PlayerInput.cs" />
     <Compile Include="Factories\BackgroundFactory.cs" />
     <Compile Include="Factories\PlayerFactory.cs" />
     <Compile Include="Factories\ScenePopulationFactory.cs" />
     <Compile Include="Firebase\FirebaseEventBus.cs" />
     <Compile Include="Firebase\FirebasePlayerFormat.cs" />
+    <Compile Include="FSM\SceneStates\SceneState.cs" />
+    <Compile Include="FSM\SceneStates\StartGame.cs" />
+    <Compile Include="FSM\SceneStates\WaitingForPlayers.cs" />
     <Compile Include="FSM\Player\AirborneState.cs" />
     <Compile Include="FSM\Player\DeadDeadNotGoodState.cs" />
     <Compile Include="FSM\Player\GroundedState.cs" />

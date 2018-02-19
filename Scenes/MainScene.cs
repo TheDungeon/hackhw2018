@@ -1,7 +1,9 @@
 ﻿using HackHW2018.Factories;
+using HackHW2018.Firebase;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nez;
+using System.Collections.Generic;
 
 namespace HackHW2018.Scenes
 {
@@ -10,10 +12,19 @@ namespace HackHW2018.Scenes
         public int MapWidth = 0;
         float TimePassed = 0;
         public bool Paused = false;
+        public FirebaseEventBus EventBus;
+
+        //public List<FirebasePlayerFormat> Players;
+
+        public MainScene(/*List<FirebasePlayerFormat> list*/)
+        {
+            //Players = list;
+            addRenderer(new DefaultRenderer());
+            EventBus = new FirebaseEventBus();
+        }
 
         public override void Initialize()
-        {
-            addRenderer(new DefaultRenderer());
+        {            
             samplerState = SamplerState.PointClamp;
 
             var background = BackgroundFactory.MakeBackground(this);
@@ -24,9 +35,9 @@ namespace HackHW2018.Scenes
             MapWidth = (int)tiledMap.width;
 
             var player1 = PlayerFactory.MakePlayer(this);
-            var player2 = PlayerFactory.MakePlayer(this);
-            var player3 = PlayerFactory.MakePlayer(this);
-            var player4 = PlayerFactory.MakePlayer(this);
+            //var player2 = PlayerFactory.MakePlayer(this);
+            //var player3 = PlayerFactory.MakePlayer(this);
+            //var player4 = PlayerFactory.MakePlayer(this);
 
             base.Initialize();
         }

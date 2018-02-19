@@ -1,40 +1,51 @@
 ﻿using HackHW2018.Firebase;
+using HackHW2018.FSM.SceneStates;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Nez;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace HackHW2018.Scenes
 {
     public class LoadingScene : Scene
     {
-        Entity waitingText;
-        FirebaseEventBus eventBus;
-        int amountOfPlayers = 0;
+        public FirebaseEventBus EventBus;
+        public List<FirebasePlayerFormat> Players;
+        SceneState sceneState;
 
         public override void Initialize()
         {
             base.Initialize();
-
             addRenderer(new DefaultRenderer());
+            sceneState = new WaitingForPlayers();
+            Players = new List<FirebasePlayerFormat>();
             clearColor = Color.White;
+            EventBus = new FirebaseEventBus();
 
-            // create the join button
-            var sf = new NezSpriteFont(content.Load<SpriteFont>("mainfont"));
+            EventBus.ClearPlayers().Wait();
+            sceneState.Begin(this);
+        }
 
-            var x = Core.graphicsDevice.PresentationParameters.BackBufferWidth / 2 - (sf.measureString("Players - x").X / 2);
-            var y = Core.graphicsDevice.PresentationParameters.BackBufferHeight / 2 - (sf.measureString("Players - x").Y / 2);
+        public override void Update()
+        {
+            base.Update();
 
-            waitingText = createEntity("waiting-text");
+            var nextState = sceneState.Update(this);
 
-            waitingText.addComponent(new Text(sf, "Players - " + amountOfPlayers, Vector2.Zero, Color.Black));
-            waitingText.transform.setPosition(x, y);
+            if (nextState != sceneState)
+            {
+                var lastState = sceneState;
 
-            eventBus = new FirebaseEventBus();
+                sceneState.End(this);
+                sceneState = nextState;
+                sceneState.Begin(this);
+            }
 
-            eventBus.ClearPlayers().Wait();
-            var list = eventBus.GetInitialValues().Result;
+            if (sceneState.GetType() == typeof(StartGame))
+            {
+                var mainScene = new MainScene();                
+
+                Core.scene = mainScene;
+            }
         }
     }
 }

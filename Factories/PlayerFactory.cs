@@ -1,5 +1,6 @@
 ﻿using HackHW2018.Components;
 using HackHW2018.FSM.Player;
+using HackHW2018.Scenes;
 using Nez;
 using Nez.Sprites;
 using Nez.TextureAtlases;
@@ -14,8 +15,8 @@ namespace HackHW2018.Factories
         static int NextPlayerIndex = 0;
 
         public static Entity MakePlayer(Scene scene)
-        {            
-            var entity = scene.createEntity(HackHW2018.FSM.Player.PlayerIndex.Ids[NextPlayerIndex]);
+        {
+            var entity = scene.createEntity(PlayerIndex.Ids[NextPlayerIndex]);
 
             TexturePackerAtlas playerAtlas = null;
             SpriteAnimation playerJumpAnimation = null;
@@ -142,7 +143,7 @@ namespace HackHW2018.Factories
                     break;
             }
 
-            NextPlayerIndex++;
+
 
             var sprite = new Sprite<PlayerAnimationState>(playerIdleAnimation.frames[0]);
             sprite.addAnimation(PlayerAnimationState.Idle, playerIdleAnimation);
@@ -165,7 +166,12 @@ namespace HackHW2018.Factories
 
             entity.addComponent(new BoxCollider(-width / 2, -height / 2, width, height));
 
-            entity.addComponent<PlayerController>();
+            entity.addComponent(new PlayerController());
+
+            var mainScene = (scene as MainScene);
+            //entity.addComponent(new PlayerInput { PlayerId = NextPlayerIndex });
+
+            NextPlayerIndex++;
 
             return entity;
         }

@@ -15,5 +15,14 @@ namespace HackHW2018.Firebase
 
         [JsonProperty(propertyName: "isAlive")]
         public bool IsAlive { get; set; }
+
+        [JsonProperty(propertyName: "jump")]
+        public bool Jump { get; set; }
+
+        [JsonProperty(propertyName: "stop")]
+        public bool Stop { get; set; }
+
+        [JsonProperty(propertyName: "won")]
+        public bool Won { get; set; }
     }
 }
