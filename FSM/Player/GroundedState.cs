@@ -34,7 +34,7 @@ namespace HackHW2018.FSM.Player
                 controller.Velocity.Y = 0;
             }
 
-            if (Input.isKeyReleased(Keys.Space))
+            if (controller.Input.IsJumping())
             {
                 return new AirborneState();
             }

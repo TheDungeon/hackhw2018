@@ -42,7 +42,7 @@ namespace HackHW2018.Scenes
 
             if (sceneState.GetType() == typeof(StartGame))
             {
-                var mainScene = new MainScene();                
+                var mainScene = new MainScene(Players);                
 
                 Core.scene = mainScene;
             }

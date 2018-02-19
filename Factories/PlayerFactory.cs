@@ -169,7 +169,7 @@ namespace HackHW2018.Factories
             entity.addComponent(new PlayerController());
 
             var mainScene = (scene as MainScene);
-            //entity.addComponent(new PlayerInput { PlayerId = NextPlayerIndex });
+            entity.addComponent(new PlayerInput { PlayerId = NextPlayerIndex });
 
             NextPlayerIndex++;
 

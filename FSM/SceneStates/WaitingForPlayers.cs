@@ -21,7 +21,7 @@ namespace HackHW2018.FSM.SceneStates
         {
             loadingScene.Players = loadingScene.EventBus.FetchPlayers().Result;
 
-            if (loadingScene.Players.Count >= 4)
+            if (loadingScene.Players.Count >= 1)
             {
                 return new StartGame();
             }

@@ -18,7 +18,7 @@ namespace HackHW2018
         {            
             base.Initialize();
 
-            scene = new MainScene();
+            scene = new LoadingScene();
         }
     }
 }

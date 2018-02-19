@@ -14,11 +14,11 @@ namespace HackHW2018.Scenes
         public bool Paused = false;
         public FirebaseEventBus EventBus;
 
-        //public List<FirebasePlayerFormat> Players;
+        public List<FirebasePlayerFormat> Players;
 
-        public MainScene(/*List<FirebasePlayerFormat> list*/)
+        public MainScene(List<FirebasePlayerFormat> list)
         {
-            //Players = list;
+            Players = list;
             addRenderer(new DefaultRenderer());
             EventBus = new FirebaseEventBus();
         }

@@ -26,7 +26,7 @@ namespace HackHW2018.Components
         public PlayerState RegularStateMachine;
         public SpeedModiferState SpeedState;
 
-        //public PlayerInput Input;
+        public PlayerInput Input;
 
         public TiledMapMover.CollisionState CollisionState = new TiledMapMover.CollisionState();
 
@@ -37,7 +37,7 @@ namespace HackHW2018.Components
             RegularStateMachine = new GroundedState();
             SpeedState = new SpeedModiferState();
             Sprite = this.getComponent<Sprite<PlayerAnimationState>>();
-            //Input = this.getComponent<PlayerInput>();
+            Input = this.getComponent<PlayerInput>();
 
             RegularStateMachine.Begin(this);
             SpeedState.Begin(this);
@@ -78,14 +78,14 @@ namespace HackHW2018.Components
                 RegularStateMachine = nextStateMachine;
                 RegularStateMachine.Begin(this);
             }
-                        
-            if (Input.isKeyPressed(Keys.Down))
+
+            if (Input.IsStopping())
             {
                 SpeedState.AnimationFpsModifier = 0.33f;
                 SpeedState.VelocityModifier = 0.33f;
             }
 
-            else if (Input.isKeyReleased(Keys.Down))
+            else if (Input.IsStopping())
             {
                 SpeedState.AnimationFpsModifier = 1f;
                 SpeedState.VelocityModifier = 1f;
